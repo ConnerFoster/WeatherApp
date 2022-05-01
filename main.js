@@ -5,6 +5,7 @@ const input = document.getElementById("search-input");
 const errorText = document.getElementById("err");
 
 async function getWeatherData(location) {
+  location = location.toUpperCase();
   const response = await fetch(
     `https://api.weatherapi.com/v1/forecast.json?key=1986480656ec490d950204923202611&q=${location}`,
     {
