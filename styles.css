@@ -49,3 +49,30 @@ input:focus {
     margin-top: 4px;
     visibility: hidden;
 }
+h3 {
+    margin-bottom: -1.5rem;
+    font-size: 1.5rem;
+    font-weight: 500
+}
+#desc {
+    font-size: 3.5rem;
+    font-weight: 300
+}
+h1 {
+    font-size: 4rem;
+    font-weight: 700;
+}
+
+@keyframes fadeIn {
+    0% {
+      opacity: 0.1;
+      transform: scale(0.9, 0.9);
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  .fade-in {
+    animation: fadeIn 1.1s;
+  }

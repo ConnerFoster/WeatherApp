@@ -12,13 +12,14 @@ async function getWeatherData(location) {
     }
   );
   if (response.status == 400) {
-    alert("Invalid Location");
+    errorText.style.visibility = "visible";
     return;
+  } else {
+    errorText.style.visibility = "hidden";
+    const data = await response.json();
+
+    return data;
   }
-
-  const data = await response.json();
-
-  return data;
 }
 
 function displayContent(location) {
@@ -33,16 +34,17 @@ function displayContent(location) {
     if (data.location.country === "United States of America") {
       location = `${data.location.name}, ${data.location.region}`;
     }
-
+    main.classList.add("fade-in");
     main.innerHTML = `
         <h2>${description}</h2>
-        <h1>${location.toUpperCase()}</h1>
+        <h1 id="desc">${location.toUpperCase()}</h1>
         <h1>${temp} &#8457</h1>
         <h3>FEELS LIKE: ${feelLike} &#8457</h3>
         <h3>WIND: ${wind} MPH</h3>
         <h3>HUMIDITY: ${humidity}%</h3>
         `;
   });
+  main.classList.remove("fade-in");
 }
 
 form.addEventListener("submit", (e) => {
@@ -50,8 +52,8 @@ form.addEventListener("submit", (e) => {
   displayContent(input.value);
 });
 
-window.addEventListener("load", () => {
-  displayContent("Los Angeles");
-});
+//window.addEventListener("load", () => {
+displayContent("london");
+//});
 
-//error message
+//center search bar on mobile and figure out error
