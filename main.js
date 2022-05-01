@@ -52,8 +52,8 @@ form.addEventListener("submit", (e) => {
   displayContent(input.value);
 });
 
-//window.addEventListener("load", () => {
-displayContent("london");
-//});
-
+window.addEventListener("load", () => {
+  displayContent("Chicago");
+});
+//displayContent("Dublin");
 //center search bar on mobile and figure out error
