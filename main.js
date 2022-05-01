@@ -2,9 +2,10 @@ const main = document.getElementById("content");
 const searchBtn = document.getElementById("search-btn");
 const form = document.getElementById("search-form");
 const input = document.getElementById("search-input");
+const errorText = document.getElementById("err");
 
 async function getWeatherData(location) {
-  let response = await fetch(
+  const response = await fetch(
     `http://api.weatherapi.com/v1/forecast.json?key=1986480656ec490d950204923202611&q=${location}`,
     {
       mode: "cors",
@@ -15,7 +16,7 @@ async function getWeatherData(location) {
     return;
   }
 
-  let data = await response.json();
+  const data = await response.json();
 
   return data;
 }
@@ -49,4 +50,8 @@ form.addEventListener("submit", (e) => {
   displayContent(input.value);
 });
 
-displayContent("London");
+window.addEventListener("load", () => {
+  displayContent("Los Angeles");
+});
+
+//error message

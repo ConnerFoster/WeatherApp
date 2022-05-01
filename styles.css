@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;700&display=swap');
 
 body {
-    background-image: url('palmsky.jpg');
+    background-image: url('space.jpg');
     background-repeat: no-repeat;
     background-position: center center;
     background-attachment: fixed;
@@ -43,4 +43,9 @@ input:focus {
 }
 ::placeholder {
     color: white;
+}
+#err {
+    color: red;
+    margin-top: 4px;
+    visibility: hidden;
 }
