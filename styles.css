@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;700&display=swap');
+
+body {
+    background-image: url('palmsky.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.search {
+    margin: 3rem 5rem 0rem 0rem;
+    text-align: right;
+}
+
+button {
+    width: 2rem;
+    height: 2.75rem;
+    background-color: rgba(255, 255, 255, 0.4);
+    border: none;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input {
+    height: 2.6rem;
+    background-color: rgba(255, 255, 255, 0.4);
+    border: none;
+    border-radius: 4px;
+    color: white;
+    padding-left: 12px;
+    font-size: 1rem;
+}
+input:focus {
+    outline: none;
+}
+
+.content {
+    margin: 10% 0rem 0rem 17.5%;
+    color: white
+}
+::placeholder {
+    color: white;
+}
