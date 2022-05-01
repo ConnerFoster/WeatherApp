@@ -56,11 +56,13 @@ h3 {
 }
 #desc {
     font-size: 3.5rem;
-    font-weight: 300
+    font-weight: 300;
+   
 }
 h1 {
     font-size: 4rem;
     font-weight: 700;
+    
 }
 
 @keyframes fadeIn {

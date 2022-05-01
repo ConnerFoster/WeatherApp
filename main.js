@@ -46,6 +46,7 @@ function displayContent(location) {
         `;
   });
   main.classList.remove("fade-in");
+  input.value = "";
 }
 
 form.addEventListener("submit", (e) => {
